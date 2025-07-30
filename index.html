@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+<style>
+#potato {
+   width: 30vh; 
+   height: 30vh;
+}
+img {
+   display: block;
+}
+
+</style>
+<meta charset="utf-8">
+<title>place o potato</title>
+</head>
+<body>
+<div id="potato">huh... theres nothing here? bro he said he would come..maybe if you click the button below he will appear?</div>
+<script>
+const div = document.getElementById('potato')
+
+function clickCounter() {
+  const x = document.getElementById("result");
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    x.innerHTML = "cool. you clicked." + localStorage.clickcount + " time(s)!";
+  } else {
+    x.innerHTML = "you don't have web storage support.";
+  }
+  if (localStorage.clickcount === "5") {
+   let img = document.createElement("img");    
+   img.src = "potato png.png";
+   div.appendChild(img);  
+}
+}
+
+</script>
+<button onclick="clickCounter()" type="button">potato button</button>
+<p id="result"></p>
+</body>
+</HTML>
