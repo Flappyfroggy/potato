@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <head>
 <style>
-#potato {
-   width: 30vh; 
-   height: 30vh;
+* {
+  font-size: 5vh;
 }
-img {
-   display: block;
-}
+button {
+  font-family: 'Courier New', Courier, monospace;
+  color: #8fbc8f;
 
+}
+#potato {
+   width: 70vh; 
+   height: 70vh;
+}
+body {
+  background-color: beige;
+}
 </style>
 <meta charset="utf-8">
 <title>place o potato</title>
 </head>
 <body>
-<div id="potato">huh... theres nothing here? bro he said he would come..maybe if you click the button below he will appear?</div>
+<div id="potato">huh... theres nothing here? bro he said he would come..maybe if you click the potato button below he will appear...</div>
+<button onclick="clickCounter()" type="button">potato</button>
+<button onclick="reset()" type="button">reset everything</button>
+<p id="result"></p>
 <script>
-const div = document.getElementById('potato')
+ const div = document.getElementById('potato')
 
 function clickCounter() {
   const x = document.getElementById("result");
@@ -26,19 +36,25 @@ function clickCounter() {
     } else {
       localStorage.clickcount = 1;
     }
-    x.innerHTML = "cool. you clicked." + localStorage.clickcount + " time(s)!";
+    x.innerHTML = "cool. you clicked" + localStorage.clickcount + " time(s)!";
   } else {
     x.innerHTML = "you don't have web storage support.";
   }
   if (localStorage.clickcount === "5") {
-   let img = document.createElement("img");    
+   var img = document.createElement("img");
    img.src = "potato png.png";
+   img.id = "potato-img";
    div.appendChild(img);  
 }
 }
+function reset() {
+  localStorage.clear();
+  let img = document.getElementById('potato-img')
+   if (img) {
+    img.remove();
+  }
+}
 
 </script>
-<button onclick="clickCounter()" type="button">potato button</button>
-<p id="result"></p>
 </body>
 </HTML>
