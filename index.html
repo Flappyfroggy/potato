@@ -20,16 +20,35 @@ button {
 }
 body {
   background-color: beige;
+  margin: 0;
+  padding: 0;
+  }
+#cheese1 {
+  background: #266a87;
+background: linear-gradient(90deg,rgba(38, 106, 135, 1) 0%, rgba(126, 230, 223, 1) 6%, rgba(99, 198, 187, 1) 16%, rgba(93, 208, 161, 1) 36%, rgba(89, 215, 160, 1) 42%, rgba(87, 217, 160, 1) 57%, rgba(127, 219, 121, 1) 67%, rgba(255, 244, 148, 1) 100%);
+width: 100%;
+height: 25vh;
+
+}
+#cheese2 {
+  background: #266a87;
+background: linear-gradient(90deg,rgba(38, 106, 135, 1) 0%, rgba(126, 230, 223, 1) 6%, rgba(99, 198, 187, 1) 16%, rgba(93, 208, 161, 1) 36%, rgba(89, 215, 160, 1) 42%, rgba(87, 217, 160, 1) 57%, rgba(127, 219, 121, 1) 67%, rgba(255, 244, 148, 1) 100%);
+width: 100%;
+height: 25vh;
+margin-top: 10;
+padding-top: 10;
 }
 </style>
 <meta charset="utf-8">
 <title>place o potato</title>
 </head>
 <body>
+<div id="cheese1"></div>
 <div id="potato">huh... theres nothing here? bro he said he would come..maybe if you click the potato button below he will appear...</div>
 <button onclick="clickCounter()" type="button">potato</button>
 <button onclick="reset()" type="button">reset everything</button>
 <p id="result"></p>
+<div id="cheese2"></div>
 <script>
  const div = document.getElementById('potato')
 
@@ -49,7 +68,8 @@ function clickCounter() {
    var img = document.createElement("img");
    img.src = "potato png.png";
    img.id = "potato-img";
-   div.appendChild(img);  
+   div.appendChild(img); 
+   document.body.style.backgroundcolor = "";
 }
 if (localStorage.clickcount === "10") {
   let img = document.getElementById('potato-img')
@@ -130,9 +150,6 @@ if (localStorage.clickcount === "45") {
    img8.src = "finishedpotato.jpg"; 
    img8.id = "finishedpotato";
    div.appendChild(img8);  
-}
-
-if (parseInt(localStorage.clickcount) > 5 && parseInt(localStorage.clickcount)< 9) {
 }
 }
 function reset() {
