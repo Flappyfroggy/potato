@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
 <style>
 * {
-  font-size: 5vh;
+  font-size: 4.08vh;
 }
+
 button {
   font-family: 'Courier New', Courier, monospace;
   color: #8fbc8f;
 
 }
 #potato {
-   width: 70vh; 
-   height: 70vh;
+  width: 70vh; 
+  height: 70vh;
+  font-family: "Metamorphous", serif;
 }
 body {
   background-color: beige;
@@ -126,6 +131,9 @@ if (localStorage.clickcount === "45") {
    img8.id = "finishedpotato";
    div.appendChild(img8);  
 }
+
+if (parseInt(localStorage.clickcount) > 5 && parseInt(localStorage.clickcount)< 9) {
+}
 }
 function reset() {
   localStorage.clear();
@@ -165,7 +173,6 @@ function reset() {
    if (img8) {
     img8.remove();
   }
-  
 }
 
 </script>
