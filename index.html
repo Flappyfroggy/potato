@@ -62,19 +62,69 @@ if (localStorage.clickcount === "15") {
     img.remove();
    }
    var img3 = document.createElement("img");
-   img3.src = "potato.png3.jpg";
-   img3.id = "potato-img3";
+   img3.src = "potatopeeled.jpg";
+   img3.id = "potatopeeled";
    div.appendChild(img3);  
 }
 if (localStorage.clickcount === "20") {
-  let img = document.getElementById('potato-img3')
+  let img = document.getElementById('potatopeeled')
    if (img) {
     img.remove();
    }
    var img4 = document.createElement("img");
-   img4.src = "potato.png4.jpg"; 
-   img4.id = "potato-img4";
+   img4.src = "potatocubed.jpg"; 
+   img4.id = "potatocubed";
    div.appendChild(img4);  
+}
+if (localStorage.clickcount === "25") {
+  let img = document.getElementById('potatocubed')
+   if (img) {
+    img.remove();
+   }
+   var img5 = document.createElement("img");
+   img5.src = "mashpotato.jpg"; 
+   img5.id = "mashpotato";
+   div.appendChild(img5);  
+}
+if (localStorage.clickcount === "30") {
+  let img = document.getElementById('mashpotato')
+   if (img) {
+    img.remove();
+   }
+   var img6 = document.createElement("img");
+   img6.src = "chives.jpg"; 
+   img6.id = "chives";
+   div.appendChild(img6);  
+}
+if (localStorage.clickcount === "35") {
+  let img = document.getElementById('chives')
+   if (img) {
+    img.remove();
+   }
+   var img6 = document.createElement("img");
+   img6.src = "choppedchives.jpg"; 
+   img6.id = "choppedchives";
+   div.appendChild(img6);  
+}
+if (localStorage.clickcount === "40") {
+  let img = document.getElementById('choppedchives')
+   if (img) {
+    img.remove();
+   }
+   var img7 = document.createElement("img");
+   img7.src = "butter.jpg"; 
+   img7.id = "butter";
+   div.appendChild(img7);  
+}
+if (localStorage.clickcount === "45") {
+  let img = document.getElementById('butter')
+   if (img) {
+    img.remove();
+   }
+   var img8 = document.createElement("img");
+   img8.src = "finishedpotato.jpg"; 
+   img8.id = "finishedpotato";
+   div.appendChild(img8);  
 }
 }
 function reset() {
@@ -87,13 +137,33 @@ function reset() {
    if (img2) {
     img2.remove();
    }
-    let img3 = document.getElementById('potato-img3')
+    let img3 = document.getElementById('potatopeeled')
    if (img3) {
     img3.remove();
   }
-  let img4 = document.getElementById('potato-img4')
+  let img4 = document.getElementById('potatocubed')
    if (img4) {
     img4.remove();
+  }
+  let imge = document.getElementById('mashpotato')
+   if (imge) {
+    imge.remove();
+  }
+  let img5 = document.getElementById('chives')
+   if (img5) {
+    img5.remove();
+  }
+  let img6 = document.getElementById('choppedchives')
+   if (img6) {
+    img6.remove();
+  }
+  let img7 = document.getElementById('butter')
+   if (img7) {
+    img7.remove();
+  }
+  let img8 = document.getElementById('finishedpotato')
+   if (img8) {
+    img8.remove();
   }
   
 }
