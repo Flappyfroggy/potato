@@ -89,6 +89,13 @@ button {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+#thank {
+  font-family: "Pacifico", cursive;
+  font-size: 10vh;
+}
+#result {
+  font-family: "Metamorphous", serif;
+}
 </style>
 <meta charset="utf-8">
 <title>place o potato</title>
@@ -99,6 +106,7 @@ button {
 <button onclick="clickCounter()" type="button">potato</button>
 <button onclick="reset()" type="button">reset everything</button>
 <p id="result"></p>
+<p id="thank"></p>
 <div id="cheese2">made by Flappyfroggy on github</div>
 <script>
  const div = document.getElementById('potato')
@@ -202,6 +210,10 @@ if (localStorage.clickcount === "45") {
    img8.id = "finishedpotato";
    div.appendChild(img8);  
 }
+if (localStorage.clickcount === "50") {
+    const thankyou = document.getElementById('thank')
+    thankyou.innerHTML = "Thankyou for playing!";
+}
 }
 function reset() {
   localStorage.clear();
@@ -240,6 +252,10 @@ function reset() {
   let img8 = document.getElementById('finishedpotato')
    if (img8) {
     img8.remove();
+  }
+  let thankyoutext = document.getElementById('thank')
+  if (thankyoutext) {
+    thankyoutext.remove();
   }
 }
 
